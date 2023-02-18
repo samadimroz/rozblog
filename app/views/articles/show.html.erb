@@ -1,0 +1,19 @@
+<%= flash[:notice] %>
+<h1><%= @article.title %></h1>
+<hr>
+
+
+<strong><%= @article.body %></strong><br><br>
+
+
+<button><%= link_to 'Back', articles_path %></button> | <button><%= link_to 'Edit', edit_article_path(@article) %></button> |
+ <button><%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></button><hr><hr>
+
+<h3>Comments</h3>
+<%= render @article.comments %>
+
+<hr>
+<h3>Add a comment:</h3>
+<%= render 'comments/form' %>
+
+

@@ -1,0 +1,24 @@
+<%= flash[:notice] %>
+<h1>Articles index</h1>
+<hr>
+
+<%# <ul>
+  <% @articles.each do |article| %>
+    <%# <li>
+      <%= article.title %>
+      <%# <%= article.body%>
+    <%# </li>
+  <% end %>
+<%# </ul> %> %> %> %> %>
+
+<% @articles.each do |article| %>
+  <% unless article.archived? %>
+  <h3>
+  <%= link_to article.title, article %>
+  </h3>
+  <% end %>
+<% end %>
+
+<button style="border-radius:2px;">
+<%= link_to 'New Article', new_article_path %>
+</button>

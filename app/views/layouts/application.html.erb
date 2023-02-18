@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rozblog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+
+  </head>
+
+  <body>
+
+  <div class="overlay"></div>
+        <section class="top-part">
+          <img src="/assets/img/skills-img.jpg">
+        </section>
+        
+        <section class="cd-hero">
+
+          <div class="cd-slider-nav">
+            <nav>
+              <span class="cd-marker item-1"></span>
+              <ul>
+                <li><a href="http://localhost:3000/"><div class="image-icon"><img src="/assets/img/home-icon.png"></div><h6>Home</h6></a></li>
+                <li><a href="http://localhost:3000/"><div class="image-icon"><img src="/assets/img/about-icon.png"></div><h6>Student Data</h6></a></li>
+                <li><a href="http://localhost:3000/"><div class="image-icon"><img src="/assets/img/featured-icon.png"></div><h6>Books</h6></a></li>
+                <%# <% if session[:admin] %> 
+                <%# <li><a href="/admin/logout"><div class="image-icon"><img src="/assets/img/projects-icon.png"></div><h6>Books Logout</h6></a></li> %>
+                <%# <% else %> 
+                <li><a href="/admin/login"><div class="image-icon"><img src="/assets/img/projects-icon.png"></div><h6>Books Login</h6></a></li>
+                <%# <% end %>
+                <%# <li><a href="http://localhost:3000/"><div class="image-icon"><img src="/assets/img/home-icon.png"></div><h6>Home</h6></a></li> %>
+                <li><a href="http://localhost:3000/"><div class="image-icon"><img src="/assets/img/contact-icon.png"></div><h6>Phone Directory</h6></a></li>
+              </ul>
+            </nav> 
+          </div> <!-- .cd-slider-nav -->
+
+          <ul class="cd-hero-slider">
+
+            <li class="selected">
+              <div class="heading">
+                <h1>Blog App</h1>
+                <span>These are rails project</span>
+              </div>
+              <div class="cd-full-width first-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content first-content">
+                        <%= yield %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </li>
+          </ul> <!-- .cd-hero-slider -->
+        </section> <!-- .cd-hero -->
+
+
+        <footer>
+          <p>Copyright &copy; @samadimroz
+                                
+        	| Designed by <em>Imroz Wajid</em></p>
+        </footer>
+    
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+  </body>
+</html>
